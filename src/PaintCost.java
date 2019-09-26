@@ -114,6 +114,7 @@ public class PaintCost {
 		sqFtCost = sqFtCost * sqFtToPaint;
 		System.out.println("The total cost to paint the house is " + formatter.format(sqFtCost) + ".");
 		
+		//github problems
 		
 	}
 
