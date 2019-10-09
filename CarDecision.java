@@ -46,16 +46,13 @@ public class CarDecision {
 			year++;
 			costRegularTotal += yearlyGasRegular;
 			costHybridTotal += yearlyGasHybrid;
-			System.out.println("Cost to own after year " + year + " for " + makeHybrid[1] + " " + modelHybrid[1] + " " + formatter.format(costHybridTotal) + ".");
-			System.out.println("Cost to own after year " + year + " for " + makeRegular[1] + " " + modelRegular[1] + " " + formatter.format(costRegularTotal) + ".");
+			System.out.println("Cost to own after year " + year + " for " + makeHybrid[1] + " " + modelHybrid[1] + ": " + formatter.format(costHybridTotal));
+			System.out.println("Cost to own after year " + year + " for " + makeRegular[1] + " " + modelRegular[1] + ": " + formatter.format(costRegularTotal));
 
 			//Prints if the hybrid is most cost efficient than the regular after 5 years
 			if (costHybridTotal < costRegularTotal) {
 				System.out.println("The hybrid car pays back after " + year + " years.");
-			}
-//			else {
-//				System.out.println("The hybrid car does not pay back after " + year + " years.");
-//			}
+			}	
 			
 		}
 		
