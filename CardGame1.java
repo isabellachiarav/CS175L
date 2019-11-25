@@ -118,7 +118,7 @@ public class CardGame1 {
 					}
 				}
 				countDraw++;
-				System.out.println("Draw " + countDraw + ": Your new hand is " + Arrays.toString(myHand));
+				System.out.println("Draw " + countDraw + ": My new hand is " + Arrays.toString(myHand));
 				if (yourSuit.equals("Hearts")) {
 					if (yourHand[i] > 13) {
 						yourHand[i] = generator.nextInt(52) + 1;
