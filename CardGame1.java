@@ -111,6 +111,18 @@ public class CardGame1 {
 					}
 				}
 			}
+			count1 = 0;
+			for (int j=0; j<5;j++) {
+				if (myHand[j] >= myLowRange && myHand[j] <= myHighRange) {
+					count1++;
+				}
+			}
+			System.out.println("\tMy new hand is " + Arrays.toString(myHand));
+			if (count1 == 5 ) {
+				winner = true;
+				System.out.println("I am the winner.");
+				break;
+			}
 			if (yourDraw >= yourLowRange && yourDraw <= yourHighRange) {
 				for (int i = 0; i < yourHand.length; i++) {
 					if (yourHand[i] < yourLowRange || yourHand[i] > yourHighRange) {
@@ -119,31 +131,24 @@ public class CardGame1 {
 					}
 				}
 			}
-			System.out.println("\tMy new hand is " + Arrays.toString(myHand));
-			System.out.println("\tYour new hand is " + Arrays.toString(yourHand));
-			for (int i = 0; i < myHand.length; i++) {
-				if(myHand[i] >= myLowRange && myHand[i] <= myHighRange) {
-					count1++;
-				}
-				if (count1 == 5) {
-					winner = true;
-					System.out.println("I am the winner.");
-				}
-			}
-			for (int i = 0; i < yourHand.length; i++) {
-				if(yourHand[i] >= yourLowRange && yourHand[i] <= yourHighRange) {
+			count2 = 0;
+			for (int j=0; j<5; j++) {
+				if (yourHand[j] >= yourLowRange && yourHand[j]<= yourHighRange){
 					count2++;
 				}
-				if (count2 == 5) {
-					winner = true;
-					System.out.println("You are the winner.");
-				}
 			}
-
-
+			System.out.println("\tYour new hand is " + Arrays.toString(yourHand));
+			if (count2 == 5) {
+				winner = true;
+				System.out.println("You are the winner.");
+				break;
+			}
 
 		}
 		System.out.println("The game is over.");
+		
+
+		
 	}
 
 }
